@@ -3,8 +3,8 @@ name: feature
 on:
   push:
     branches:
-      - #TODO run all feature/ branches
-      - 'hotfix'
+      - 'feature/**'
+      - 'hotfix/**'
   pull_request:
     types: [ opened, reopened ]
     branches:
