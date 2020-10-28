@@ -37,13 +37,13 @@ jobs:
 
       - name: Install dependencies
         if: steps.cache-pipenv.outputs.cache-hit != 'true'
-        run: make install; # RUN INIT
+        run: make init # RUN INIT
 
       - name: Run analyzer
-        run: make analyze; # RUN analyzer
+        run: make analyze # RUN analyzer
 
       - name: Run test suite
-        run: make tests; # RUN TESTS & CODECOVERAGE
+        run: make tests # RUN TESTS & CODECOVERAGE
 
       - name: Upload test results (junit)
         uses: actions/upload-artifact@v2
